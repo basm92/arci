@@ -19,6 +19,7 @@ library(fixest)
 #'
 #' @return Returns an object of class 'ar_ci' containing the confidence interval,
 #'   the grid of tested values, and their corresponding p-values.
+#' @export
 ar_ci <- function(model, param, level = 0.95, grid_range = NULL, grid_length = 1000) {
     
     # --- 1. Input Validation ---

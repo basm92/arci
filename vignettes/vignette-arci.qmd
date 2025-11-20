@@ -22,8 +22,7 @@ Then, we visualize the results and extract the confidence intervals using the `g
 
 Finally, we use `get_ar_ci` to extract the computed confidence intervals in a tidy format.
 
-```{r}
-#| label: setup
+```{r setup}
 library(arci)
 ```
 

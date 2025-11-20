@@ -2,3 +2,5 @@
 
 S3method(plot,ar_ci)
 S3method(print,ar_ci)
+export(ar_ci)
+export(get_ar_ci)

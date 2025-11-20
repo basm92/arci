@@ -7,6 +7,7 @@
 #'
 #' @param model A 'fixest' object resulting from an IV estimation.
 #' @return Returns a string representing the Anderson-Rubin confidence interval.
+#' @export
 get_ar_ci <- function(model){
     interval <- ar_ci(model)$ci |> 
         purrr::pluck(1) |>

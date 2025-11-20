@@ -1,4 +1,6 @@
 #' Plot method for ar_ci objects
+#' @param x An object of class 'ar_ci' returned by the `ar_ci` function.
+#' @param ... Additional arguments passed to the plot function.
 #' @export
 plot.ar_ci <- function(x, ...) {
     alpha <- 1 - x$level

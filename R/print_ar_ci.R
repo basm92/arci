@@ -1,4 +1,6 @@
 #' Print method for ar_ci objects
+#' @param x An object of class 'ar_ci' returned by the `ar_ci` function.
+#' @param ... Additional arguments (not used).
 #' @export
 print.ar_ci <- function(x, ...) {
     cat("Anderson-Rubin", paste0(x$level * 100, "%"), "Confidence Set for '", x$param, "'\n\n", sep = "")

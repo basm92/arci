@@ -9,7 +9,7 @@
 #' @return Returns a string representing the Anderson-Rubin confidence interval.
 get_ar_ci <- function(model){
     interval <- ar_ci(model)$ci |> 
-        pluck(1) |>
+        purrr::pluck(1) |>
         sprintf("%.3f", x = _) |> 
         paste0(... = _, collapse = ", ")
     

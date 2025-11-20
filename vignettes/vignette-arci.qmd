@@ -12,6 +12,16 @@ knitr:
 
 In this vignette, we demonstrate how to compute Anderson-Rubin confidence intervals for instrumental variables regression models estimated using the `feols` function from the `fixest` package. The Anderson-Rubin method provides robust inference in the presence of weak instruments.
 
+We will use the built-in `mtcars` dataset for illustration. In this example, we will regress `mpg` (miles per gallon) on `cyl` (number of cylinders) using `hp` (horsepower) as an endogenous regressor and `qsec` (1/4 mile time) as an instrument.
+
+First, we run a regression using `feols`.
+
+Second, we compute the Anderson-Rubin confidence intervals for the coefficient of the endogenous regressor `hp` using the `ar_ci` function from the `arci` package.
+
+Then, we visualize the results and extract the confidence intervals using the `get_ar_ci` function.
+
+Finally, we use `get_ar_ci` to extract the computed confidence intervals in a tidy format.
+
 ```{r}
 #| label: setup
 library(arci)

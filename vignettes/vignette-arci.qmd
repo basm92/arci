@@ -25,6 +25,9 @@ Finally, we use `get_ar_ci` to extract the computed confidence intervals in a ti
 ```{r}
 #| label: setup
 library(arci)
+```
+
+```{r}
 library(fixest)
 
 regression <- feols(mpg ~ cyl | hp ~ qsec, data = mtcars)

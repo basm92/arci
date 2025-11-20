@@ -1,0 +1,36 @@
+## ARCI
+
+`ARCI` is an R package to create Anderson-Rubin confidence intervals for
+instrumental variable regression models.
+
+The function is compatible with models created with the `feols` function
+from the `fixest` package.
+
+The Anderson-Rubin method is robust to weak instruments and provides
+valid inference even when the instruments are not strongly correlated
+with the endogenous regressors.
+
+For more technical background, check my blog post
+[here](https://bas-m.netlify.app/posts/andersonrubin).
+
+# Package index
+
+## All functions
+
+- [`ar_ci()`](https://basm92.github.io/arci/reference/ar_ci.md) :
+  Calculate Anderson-Rubin Confidence Intervals for fixest IV objects
+  (Compatible with Fixed Effects)
+- [`get_ar_ci()`](https://basm92.github.io/arci/reference/get_ar_ci.md)
+  : For a regression table, get Anderson-Rubin Confidence Intervals for
+  fixest IV objects (Compatible with Fixed Effects)
+- [`plot(`*`<ar_ci>`*`)`](https://basm92.github.io/arci/reference/plot.ar_ci.md)
+  : Plot method for ar_ci objects
+- [`print(`*`<ar_ci>`*`)`](https://basm92.github.io/arci/reference/print.ar_ci.md)
+  : Print method for ar_ci objects
+
+# Articles
+
+### All vignettes
+
+- [Anderson-Rubin Confidence Intervals based on \`feols\` IV regression
+  objects](https://basm92.github.io/arci/articles/vignette-arci.md):

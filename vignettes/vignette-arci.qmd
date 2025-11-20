@@ -1,0 +1,29 @@
+---
+title: "Anderson-Rubin Confidence Intervals based on `feols` IV regression objects"
+vignette: >
+  %\VignetteIndexEntry{Anderson-Rubin Confidence Intervals based on `feols` IV regression objects}
+  %\VignetteEngine{quarto::html}
+  %\VignetteEncoding{UTF-8}
+knitr:
+  opts_chunk:
+    collapse: true
+    comment: '#>'
+---
+
+In this vignette, we demonstrate how to compute Anderson-Rubin confidence intervals for instrumental variables regression models estimated using the `feols` function from the `fixest` package. The Anderson-Rubin method provides robust inference in the presence of weak instruments.
+
+```{r}
+#| label: setup
+library(arci)
+library(fixest)
+
+regression <- feols(mpg ~ cyl | hp ~ qsec, data = mtcars)
+etable(regression)
+
+arci_results <- ar_ci(regression, param = "hp", level = 0.95)
+print(arci_results)
+
+plot(arci_results)
+
+get_ar_ci(regression)
+```

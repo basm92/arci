@@ -11,3 +11,7 @@ RoxygenNote: 7.3.2
 Imports: 
     fixest,
     purrr
+Suggests: 
+    knitr,
+    quarto
+VignetteBuilder: quarto
